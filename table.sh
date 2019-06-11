@@ -68,13 +68,13 @@ function table:fieldoid {
     local table_name="$1"
     local field_name="$2"
 
-    local root_oid=$(table:rootoid "$table_name")
+    root_oid=$(table:rootoid "$table_name")
     if [ $? -ne 0 ]
     then
 	return 1
     fi
 
-    local field_data=($(table:fielddata $table_name $field_name))
+    field_data=($(table:fielddata $table_name $field_name))
     if [ $? -ne 0 ]
     then
 	return 2	
