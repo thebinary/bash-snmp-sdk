@@ -6,4 +6,6 @@
 
 source_dir=$(dirname ${BASH_SOURCE[0]})
 source $source_dir/table.sh
+source $source_dir/helpers.sh
+source $source_dir/snmp.sh
 source $source_dir/if_table.sh
